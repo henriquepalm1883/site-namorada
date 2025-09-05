@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Tuxinha 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trabalho da Faculdade, tematica meu amorzinho! 💕</h1>
+        <p class="frase">Você é o melhor presente que a vida me deu. Te amo hoje e sempre! ❤️</p>
+
+        <button id="playBtn">🎶 Tocar Música</button>
+        <audio id="musica" loop>
+            <source src="musica.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+
+        <div class="galeria">
+            <img src="imagensfoto1.jpeg" alt="Nós dois" loading="lazy">
+            <img src="imagensfoto2.jpeg" alt="Momentos juntos" loading="lazy">
+            <img src="imagensfoto3.jpeg" alt="Sorrisos" loading="lazy">
+        </div>
+    </div>
+
+    <script>
+        const playBtn = document.getElementById('playBtn');
+        const musica = document.getElementById('musica');
+
+        playBtn.addEventListener('click', () => {
+            musica.play();
+            playBtn.style.display = 'none'; // esconde o botão depois de tocar
+        });
+    </script>
+</body>
+</html>

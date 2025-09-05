@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    text-align: center;
+    color: #fff;
+}
+
+.container {
+    padding: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    animation: pulse 2s infinite;
+}
+
+.frase {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Botão de música */
+#playBtn {
+    background: #ff4da6;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background 0.3s;
+}
+#playBtn:hover {
+    background: #ff1a8c;
+}
+
+.galeria {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff4da6; }
+    50% { text-shadow: 0 0 20px #fff, 0 0 30px #ff1a8c; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff4da6; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 20px; }
+    h1 { font-size: 1.8rem; }
+    .frase { font-size: 1rem; }
+    .galeria { gap: 12px; }
+    .galeria img { width: 100%; border-radius: 12px; }
+}
